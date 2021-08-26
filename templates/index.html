@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="POST" class="contact-form">
+            {% csrf_token %}
+            <h1>Get in touch</h1>
+            <div class="form-control">
+                <div class="tag">Full Name</div>
+                <input type="text" name="full-name" placeholder="Baratov Muzrob">
+            </div>
+            <div class="form-control">
+                <div class="tag">Email</div>
+                <input type="text" name="email" placeholder="misol@email.com">
+            </div>
+            <div class="form-control">
+                <div class="tag">Phone number</div>
+                <input type="text" name="phone" placeholder="+99893 545-xx-xx">
+            </div>
+            <div class="form-control">
+                <div class="tag">Subject</div>
+                <input type="text" name="subject">
+            </div>
+            <div class="form-control">
+                <div class="tag">Message</div>
+                <textarea name="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-control">
+                <input type="submit" class="btn submit-btn" value="Send message">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
